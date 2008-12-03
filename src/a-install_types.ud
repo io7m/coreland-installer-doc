@@ -1,0 +1,33 @@
+(section
+  (ref "install_types")
+  (title "install types")
+
+  (subsection
+    (title "install_item")
+
+    (para-verbatim example
+      (render "insthier_item.h"))
+
+    (para "The " (item type "install_item") " structure specifies an operation
+      for the installer to perform. See " (link "insthier_item" "insthier") "."))
+
+  (subsection
+    (title "install_status_t")
+
+    (para-verbatim example
+      (render "install_status.h"))
+
+    (para "The " (item type "install_status_t") " structure is returned by all
+      API functions. It reports whether an operation succeeded or failed and
+      also returns a pointer to an error message if necessary.")
+
+    (para "If the " (item struct_field "status") " field is any value other
+      than " (item constant "INSTALL_STATUS_OK") ", the "
+      (item struct_field "message") " field contains an appropriate message.")
+ 
+    (para "If the " (item struct_field "status") " field is set to "
+      (item constant "INSTALL_STATUS_FATAL") ", a serious error has occurred 
+      and the installer library may now be in an inconsistent state. The only
+      appropriate action to take in these circumstances is to abort the calling
+      process."))
+)

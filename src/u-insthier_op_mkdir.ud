@@ -1,0 +1,13 @@
+(section
+  (ref "insthier_op_mkdir")
+  (title "INST_MKDIR")
+
+  (para "The " (item constant "INST_MKDIR") " operation specifies that
+    the directory " (item file_name "dir") " should be created. The full
+    path is created, including any necessary parent directories.")
+
+  (para "Example structure definitions: ")
+
+  (para-verbatim example
+    (render "u-insthier_op_mkdir.c"))
+)

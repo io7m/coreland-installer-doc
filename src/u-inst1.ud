@@ -1,0 +1,13 @@
+(section
+  (ref "install_simple")
+  (title "a simple installer")
+
+  (para "The simplest possible installer program is as follows:")
+
+  (para-verbatim example
+    (render "u-inst1.c"))
+
+  (para "The program simply iterates over an array of structures
+    (known as the " (link "insthier") "). It handles errors
+    appropriately but otherwise remains silent.")
+)

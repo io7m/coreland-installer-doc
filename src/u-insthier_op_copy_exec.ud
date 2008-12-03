@@ -1,0 +1,25 @@
+(section
+  (ref "insthier_op_copy_exec")
+  (title "INST_COPY_EXEC")
+
+  (para "The " (item constant "INST_COPY_EXEC") " operation specifies that
+    an executable should be copied from " (item file_name "src") ", an absolute
+    or relative path to the source file, to the directory "
+    (item file_name "dir") " with the resulting filename "
+    (item file_name "dst") ".")
+
+  (para "If " (item file_name "dst") " is not specified, the original
+    " (item file_name "src") " filename is unchanged.")
+
+  (para "The reason for the existence of this operation is that some platforms
+    use suffixes for executables (such as " (item file_suffix ".exe") ") and
+    therefore a common syntax is required to ensure portability. Using this
+    operation, it is possible to specify a single name for an executable and
+    have it automatically translated the correct platform-specific name at
+    run-time.")
+
+  (para "Example structure definitions: ")
+
+  (para-verbatim example
+    (render "u-insthier_op_copy_exec.c"))
+)

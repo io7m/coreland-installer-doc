@@ -1,0 +1,34 @@
+(section
+  (ref "install_callback")
+  (title "install_callback")
+  (para funtion_desc "Register callbacks.")
+  (subsection
+    (title "synopsis")
+    (para-verbatim function_synopsis
+"
+void
+install_callback_warn_set (void (*callback)(const char *, void *));
+
+void
+install_callback_info_set (void (*callback)(const char *, void *));
+
+void
+install_callback_data_set (void *data);
+
+"))
+  (subsection
+    (title "description")
+    (para "The " (item function "install_callback_warn_set") " function registers
+      the function " (item function_param "callback") " to be called when a
+      warning is raised by the library. The callback is passed a warning message
+      and any user data that may have been registered with "
+      (item function "install_callback_data_set") ".")
+    (para "The " (item function "install_callback_info_set") " function registers
+      the function " (item function_param "callback") " to be called when a
+      the library has non-vital information to report. The callback is passed a
+      message and any user data that may have been registered with "
+      (item function "install_callback_data_set") ".")
+    (para "The " (item function "install_callback_data_set") " function specifies
+      that " (item function_param "data") " should be passed to the above
+      library callbacks.")))
+ 

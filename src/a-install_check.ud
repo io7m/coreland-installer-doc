@@ -1,0 +1,22 @@
+(section
+  (ref "install_check")
+  (title "install_check")
+  (para funtion_desc "Check installation success.")
+  (subsection
+    (title "synopsis")
+    (para-verbatim function_synopsis
+"struct install_status_t
+install_check (struct install_item *item);
+
+unsigned long install_failed;
+"))
+  (subsection
+    (title "description")
+    (para
+      "The " (item function "install_check") " function checks whether the
+      operation specified by " (item function_param "item") " was successful
+      or not. In practical terms, this usually means checking that installed
+      files exist, have the expected file size, ownership, permissions, etc.")
+    (para
+      "For each failed install operation, " (item variable "install_failed") "
+      is incremented once.")))

@@ -1,0 +1,20 @@
+(section
+  (ref "install_deinstall")
+  (title "install_deinstall")
+  (para funtion_desc "Deinstall item.")
+  (subsection
+    (title "synopsis")
+    (para-verbatim function_synopsis
+"struct install_status_t
+install_deinstall (struct install_item *item, unsigned in flags);
+"))
+  (subsection
+    (title "description")
+    (para
+      "The " (item function "install_deinstall") " function performs the
+      opposite of the operation
+      specified by " (item function_param "item") ". If "
+      (item function_param "flags") " is set to "
+      (item constant "INSTALL_DRYRUN") " the operation is not actually performed
+      but the library does as much as possible to determine whether or not the
+      operation would succeed or fail, returning an appropriate response code.")))

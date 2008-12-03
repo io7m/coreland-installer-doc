@@ -1,0 +1,51 @@
+(section
+  (ref "insthier")
+  (title "insthier")
+
+  (para "The installer functions are intended to operate on an array of
+    structures known as the " (item variable "insthier") ". This array
+    is compiled from a C source file which can be easily generated with
+    a script written in any language.")
+
+  (para "The intention is that the " (item variable "insthier") " be generated
+    once and distributed as plain C source with the rest of the project code.
+    The installer provides simple mechanisms to ensure the portability of
+    filenames even when they may vary across platforms. The "
+    (item variable "insthier") " source should be written once and used
+    unmodified on all platforms.")
+
+  (para "An example " (item variable "insthier") ":")
+
+  (para-verbatim example
+    (render "u-insthier.c"))
+
+  (para "Each element of the array specifies an operation to be performed, using
+    the following C structure:")
+
+  (ref "insthier_item")
+
+  (para-verbatim example
+    (render "insthier_item.h"))
+
+  (para
+    "The fields of the structure specify the source filename, destination
+    filename, destination directory, owner, group and POSIX permissions
+    as an octal integer value. Depending on the operation, some fields
+    may be " (item constant "NULL") ". If the " (item struct_field "owner")
+    " and/or " (item struct_field "group") " fields are " (item constant "NULL")
+    " the user/group credentials of the current process are used.")
+
+  (para "The installer package insists that the array be called "
+    (item variable "insthier") " and that there also be a symbol of type
+    " (item type "unsigned long") " called " (item variable
+    "insthier_len") " that is set to the number of elements in the
+    array. There are no other restrictions or requirements.")
+
+  (para "The operations that can be specified for each item are as follows:")
+
+  (include "u-insthier_op_copy.ud")
+  (include "u-insthier_op_copy_exec.ud")
+  (include "u-insthier_op_mkdir.ud")
+  (include "u-insthier_op_link.ud")
+  (include "u-insthier_op_liblink.ud")
+)

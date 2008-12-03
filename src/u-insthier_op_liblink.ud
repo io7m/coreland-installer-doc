@@ -1,0 +1,43 @@
+(section
+  (ref "insthier_op_liblink")
+  (title "INST_LIBLINK")
+
+  (para "The " (item constant "INST_LINK") " operation specifies that
+    a symbolic link should be created from the file " (item file_name
+    "src") " to the basename " (item file_name "dst") " in the directory
+    " (item file_name "dir") ". " (item file_name "dst") " is
+    automatically appended with the correct platform-specific library
+    suffix.")
+
+  (para "Shared library names vary across systems. If the file "
+    (item file_name "src") " ends with the suffix " (item file_suffix ".vlb")
+    " the file is opened and a single line is read. The line must specify the
+    name of the actual shared library. When using build tools (such as those
+    distributed with all " (link-ext "http://coreland.ath.cx" "coreland") 
+    " packages, the creation and installation of shared libraries can be
+    safe, simple and automatic: ")
+
+  (para-verbatim example
+"$ echo 3 > example.vmj      # set major version number of library
+
+$ echo 1 > example.vmn      # set minor version number of library
+
+$ ./cc-dlib example file1.o file2.o file3.o
+
+$ file example.so.3.1
+example.so.3.1: ELF 64-bit LSB shared object, x86-64, version 1 (FreeBSD), stripped
+
+$ cat example.vlb
+example.so.3.1")
+
+  (para "In the above example, one can simply specify "
+    (item file_name "example.vlb") " and " (item file_name "libexample")
+    " and a symbolic link will automatically
+    be created that links " (item file_name "libexample.so.3.1")
+    " to " (item file_name "libexample.so") ".")
+
+  (para "Example structure definitions: ")
+
+  (para-verbatim example
+    (render "u-insthier_op_liblink.c"))
+)

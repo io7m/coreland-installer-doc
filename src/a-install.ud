@@ -1,0 +1,12 @@
+(section
+  (ref "install_api")
+  (title "install API reference")
+  (contents)
+
+  (include "a-install_types.ud")
+  (include "a-install_init.ud")
+  (include "a-install_install.ud")
+  (include "a-install_check.ud")
+  (include "a-install_deinstall.ud")
+  (include "a-install_callback.ud")
+)

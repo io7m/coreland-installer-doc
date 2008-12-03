@@ -1,0 +1,14 @@
+(section
+  (ref "install_init")
+  (title "install_init")
+  (para funtion_desc "Initialize installer.")
+  (subsection
+    (title "synopsis")
+    (para-verbatim function_synopsis
+"struct install_status_t install_init (void);
+"))
+  (subsection
+    (title "description")
+    (para
+      "The " (item function "install_init") " function initializes the installer
+      library. This function must be called before any other API function.")))

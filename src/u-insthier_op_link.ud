@@ -1,0 +1,19 @@
+(section
+  (ref "insthier_op_link")
+  (title "INST_LINK")
+
+  (para "The " (item constant "INST_LINK") " operation specifies that
+    a symbolic link named " (item file_name "dst") " should be created
+    in the directory " (item file_name "dir") " pointing to "
+    (item file_name "src") ".")
+
+  (para "If the underlying operating system and/or filesytem does not
+    support symbolic links, the file is copied and a warning is raised.
+    See " (link "install_callback" "install_callback_warn_set") " for
+    details on how to catch the warning.")
+
+  (para "Example structure definitions: ")
+
+  (para-verbatim example
+    (render "u-insthier_op_link.c"))
+)

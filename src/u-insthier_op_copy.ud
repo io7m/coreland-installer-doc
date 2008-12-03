@@ -1,0 +1,18 @@
+(section
+  (ref "insthier_op_copy")
+  (title "INST_COPY")
+
+  (para "The " (item constant "INST_COPY") " operation specifies that
+    a file should be copied from " (item file_name "src") ", an absolute
+    or relative path to the source file, to the directory "
+    (item file_name "dir") " with the resulting filename "
+    (item file_name "dst") ".")
+
+  (para "If " (item file_name "dst") " is not specified, the original
+    " (item file_name "src") " filename is unchanged.")
+
+  (para "Example structure definitions: ")
+
+  (para-verbatim example
+    (render "u-insthier_op_copy.c"))
+)
