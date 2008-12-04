@@ -7,14 +7,14 @@
     (title "overview")
 
     (para "This package provides a simple, zero-configuration, embeddable
-      installer. A trivial C api provides functions to install files,
-      deinstall files and check that files installed correctly. The installer
-      can also create directories and symlinks (if the underlying OS and
-      filesystem support them).")
+      installer. A trivial C API provides functions to install files,
+      deinstall files and check that files installed correctly. The "
+      (item package "installer") " can also create directories and symlinks
+      (if the underlying OS and filesystem support them).")
 
-    (para "The installer source should be included with the
-      source of the project using it. The installer is compiled along with
-      the rest of the project code."))
+    (para "The " (item package "installer") " source should be included with the
+      source of the project using it. The " (item package "installer") " is
+      compiled along with the rest of the project code."))
 
   (include "u-inst1.ud")
   (include "u-insthier.ud")

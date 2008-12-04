@@ -2,15 +2,15 @@
   (ref "insthier")
   (title "insthier")
 
-  (para "The installer functions are intended to operate on an array of
-    structures known as the " (item variable "insthier") ". This array
-    is compiled from a C source file which can be easily generated with
+  (para "The " (item package "installer") " functions are intended to operate
+    on an array of structures known as the " (item variable "insthier") ". This
+    array is compiled from a C source file which can be easily generated with
     a script written in any language.")
 
   (para "The intention is that the " (item variable "insthier") " be generated
     once and distributed as plain C source with the rest of the project code.
-    The installer provides simple mechanisms to ensure the portability of
-    filenames even when they may vary across platforms. The "
+    The " (item package "installer") " provides simple mechanisms to ensure the
+    portability of filenames even when they may vary across platforms. The "
     (item variable "insthier") " source should be written once and used
     unmodified on all platforms.")
 
@@ -35,7 +35,7 @@
     " and/or " (item struct_field "group") " fields are " (item constant "NULL")
     " the user/group credentials of the current process are used.")
 
-  (para "The installer package insists that the array be called "
+  (para "The " (item package "installer") " package insists that the array be called "
     (item variable "insthier") " and that there also be a symbol of type
     " (item type "unsigned long") " called " (item variable
     "insthier_len") " that is set to the number of elements in the

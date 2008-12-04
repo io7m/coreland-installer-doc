@@ -9,7 +9,8 @@
       (render "insthier_item.h"))
 
     (para "The " (item type "install_item") " structure specifies an operation
-      for the installer to perform. See " (link "insthier_item" "insthier") "."))
+      for the " (item package "installer") " to perform. See "
+      (link "insthier_item" "insthier") "."))
 
   (subsection
     (title "install_status_t")
@@ -27,7 +28,7 @@
  
     (para "If the " (item struct_field "status") " field is set to "
       (item constant "INSTALL_STATUS_FATAL") ", a serious error has occurred 
-      and the installer library may now be in an inconsistent state. The only
-      appropriate action to take in these circumstances is to abort the calling
-      process."))
+      and the " (item package "installer") " library may now be in an
+      inconsistent state. The only appropriate action to take in these
+      circumstances is to abort the calling process."))
 )

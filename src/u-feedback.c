@@ -28,6 +28,13 @@ main (void)
   struct install_status_t status;
   struct index_t data;
 
+  status = install_init ("conf-sosuffix");
+  if (status.status != INSTALL_STATUS_OK) {
+    fprintf (stderr, "fatal: init: %s - %s\n",
+      status.message, install_error (errno));
+    exit (1);
+  }
+
   install_callback_info_set (info_callback);
   install_callback_warn_set (warn_callback);
   install_callback_data_set (&data);

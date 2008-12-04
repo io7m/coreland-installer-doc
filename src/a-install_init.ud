@@ -5,10 +5,19 @@
   (subsection
     (title "synopsis")
     (para-verbatim function_synopsis
-"struct install_status_t install_init (void);
+"struct install_status_t
+install_init (const char *file);
 "))
   (subsection
     (title "description")
     (para
-      "The " (item function "install_init") " function initializes the installer
-      library. This function must be called before any other API function.")))
+      "The " (item function "install_init") " function initializes the "
+      (item package "installer") " library. This function must be called
+      before any other API function.")
+    (para
+      "The function attempts to open " (item function_param "file")
+      ". The file is expected to contain a single line specifying the suffix
+      of dynamic libraries on the current platform. The "
+      (item file "mk-sosuffix") " script included in the "
+      (item package "installer") " source distribution can be used to generate
+      this file.")))

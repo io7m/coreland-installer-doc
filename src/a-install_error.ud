@@ -1,0 +1,18 @@
+(section
+  (ref "install_error")
+  (title "install_error")
+  (para funtion_desc "Return consistent error string.")
+  (subsection
+    (title "synopsis")
+    (para-verbatim function_synopsis
+"const char *
+install_error (int errno);
+"))
+  (subsection
+    (title "description")
+    (para
+      "The " (item function "install_error") " returns an error string based on
+       the value of " (item function_param "errno") ". This value can be any of
+       the values from standard C " (item file_name "errno.h") ". The advantage
+       of this function over standard C " (item function "strerror") " is that
+       error messages are consistent across platforms.")))

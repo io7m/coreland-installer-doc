@@ -9,4 +9,5 @@
   (include "a-install_check.ud")
   (include "a-install_deinstall.ud")
   (include "a-install_callback.ud")
+  (include "a-install_error.ud")
 )

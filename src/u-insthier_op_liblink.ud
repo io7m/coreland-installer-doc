@@ -12,7 +12,7 @@
   (para "Shared library names vary across systems. If the file "
     (item file_name "src") " ends with the suffix " (item file_suffix ".vlb")
     " the file is opened and a single line is read. The line must specify the
-    name of the actual shared library. When using build tools (such as those
+    name of the actual shared library. When using build tools such as those
     distributed with all " (link-ext "http://coreland.ath.cx" "coreland") 
     " packages, the creation and installation of shared libraries can be
     safe, simple and automatic: ")
@@ -34,7 +34,8 @@ example.so.3.1")
     (item file_name "example.vlb") " and " (item file_name "libexample")
     " and a symbolic link will automatically
     be created that links " (item file_name "libexample.so.3.1")
-    " to " (item file_name "libexample.so") ".")
+    " to " (item file_name "libexample.so") ". Client code never needs to
+    know anything about platform-specific library naming.")
 
   (para "Example structure definitions: ")
 
