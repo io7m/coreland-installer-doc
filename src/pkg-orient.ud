@@ -1,7 +1,7 @@
 (section
   (title "orientation")
 
-  (section
+  (subsection
     (title "overview")
 
     (para "This package provides a simple, portable, embeddable installer. It
