@@ -1,0 +1,42 @@
+(section
+  (ref "install_fake_root")
+  (title "install_fake_root")
+  (para funtion_desc "Set fake root directory for installer.")
+  (subsection
+    (title "synopsis")
+    (para-verbatim function_synopsis
+"void
+install_fake_root (const char *root);
+"))
+  (subsection
+    (title "description")
+    (para
+      "The " (item function "install_fake_root") " function instructs the "
+      (item package "installer") " library to treat "
+      (item function_param "root") " as the root directory.
+      This function must be called before any other API function."))
+  (subsection
+    (title "rationale")
+    (para
+      "Some projects, such as " (link-ext "http://openbsd.org" "OpenBSD") " use
+      a means of packaging that essentially configures the software to believe it
+      has been installed into one directory and then in the last "
+      (item command "make install") " step, installs into a \"fake\" root
+      directory in order to be archived with " (item command "tar") ".")
+    (para-verbatim example
+"./configure --prefix=/real/install/dir
+make
+make DESTDIR=/tmp/fake_root install")
+    (para (link-ext "http://coreland.ath.cx" "coreland") " packages use "
+      (item function "install_fake_root") " to emulate this behaviour as
+      follows:")
+    (para-verbatim example
+"echo '/real/install/dir/bin'     > conf-bindir
+echo '/real/install/dir/include' > conf-incdir
+echo '/real/install/dir/lib'     > conf-slibdir
+echo '/real/install/dir/lib'     > conf-dlibdir
+echo '/tmp/fake_root'            > conf-fakeroot
+make
+make install
+make install-check")))
+

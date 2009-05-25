@@ -10,4 +10,5 @@
   (include "a-install_deinstall.ud")
   (include "a-install_callback.ud")
   (include "a-install_error.ud")
+  (include "a-install_fake_root.ud")
 )
