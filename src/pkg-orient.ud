@@ -1,8 +1,8 @@
 (section
-  (title "orientation")
+  (title "Orientation")
 
   (subsection
-    (title "overview")
+    (title "Overview")
 
     (para "This package provides a simple, portable, embeddable installer. It
       is distributed with every " (link-ext "http://coreland.ath.cx" "coreland")

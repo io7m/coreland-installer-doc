@@ -1,6 +1,6 @@
 (section
   (ref "install_feed")
-  (title "installer feedback")
+  (title "Installer feedback")
 
   (para "Callbacks may be registered to receive information from the
     installer library itself. This allows for the creation of progress

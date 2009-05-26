@@ -3,20 +3,20 @@
   (title "install_fake_root")
   (para funtion_desc "Set fake root directory for installer.")
   (subsection
-    (title "synopsis")
+    (title "Synopsis")
     (para-verbatim function_synopsis
 "void
 install_fake_root (const char *root);
 "))
   (subsection
-    (title "description")
+    (title "Description")
     (para
       "The " (item function "install_fake_root") " function instructs the "
       (item package "installer") " library to treat "
       (item function_param "root") " as the root directory.
       This function must be called before any other API function."))
   (subsection
-    (title "rationale")
+    (title "Rationale")
     (para
       "Some projects, such as " (link-ext "http://openbsd.org" "OpenBSD") " use
       a means of packaging that essentially configures the software to believe it

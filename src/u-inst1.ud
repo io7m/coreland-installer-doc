@@ -1,6 +1,6 @@
 (section
   (ref "install_simple")
-  (title "a simple installer")
+  (title "A simple installer")
 
   (para "The simplest possible " (item package "installer") " program
     is as follows:")

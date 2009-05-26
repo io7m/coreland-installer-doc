@@ -1,5 +1,5 @@
 (section
-  (title "package information")
+  (title "Package information")
   (contents)
   (include "pkg-orient.ud")
   (include "pkg-install.ud")

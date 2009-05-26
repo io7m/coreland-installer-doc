@@ -1,6 +1,6 @@
 (section
   (ref "install_api")
-  (title "install API reference")
+  (title "Install API reference")
   (contents)
 
   (include "a-install_types.ud")

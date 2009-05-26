@@ -3,13 +3,13 @@
   (title "install")
   (para funtion_desc "Install item.")
   (subsection
-    (title "synopsis")
+    (title "Synopsis")
     (para-verbatim function_synopsis
 "struct install_status_t
 install (struct install_item *item, unsigned in flags);
 "))
   (subsection
-    (title "description")
+    (title "Description")
     (para
       "The " (item function "install") " function performs the operation
       specified by " (item function_param "item") ". If "

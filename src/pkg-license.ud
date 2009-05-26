@@ -1,5 +1,5 @@
 (section
-  (title "license")
+  (title "License")
 
   (para
     (item package "installer") " is placed into the public domain, for

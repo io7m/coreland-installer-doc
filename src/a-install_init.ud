@@ -3,13 +3,13 @@
   (title "install_init")
   (para funtion_desc "Initialize installer.")
   (subsection
-    (title "synopsis")
+    (title "Synopsis")
     (para-verbatim function_synopsis
 "struct install_status_t
 install_init (const char *file);
 "))
   (subsection
-    (title "description")
+    (title "Description")
     (para
       "The " (item function "install_init") " function initializes the "
       (item package "installer") " library. This function must be called

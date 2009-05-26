@@ -1,10 +1,10 @@
 (section
   (ref "install_usage")
-  (title "installer package usage")
+  (title "Installer package usage")
   (contents)
 
   (section
-    (title "overview")
+    (title "Overview")
 
     (para "This package provides a simple, zero-configuration, embeddable
       installer. A trivial C API provides functions to install files,

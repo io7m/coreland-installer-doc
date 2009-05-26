@@ -3,7 +3,7 @@
   (title "install_callback")
   (para funtion_desc "Register callbacks.")
   (subsection
-    (title "synopsis")
+    (title "Synopsis")
     (para-verbatim function_synopsis
 "
 void
@@ -17,7 +17,7 @@ install_callback_data_set (void *data);
 
 "))
   (subsection
-    (title "description")
+    (title "Description")
     (para "The " (item function "install_callback_warn_set") " function registers
       the function " (item function_param "callback") " to be called when a
       warning is raised by the library. The callback is passed a warning message

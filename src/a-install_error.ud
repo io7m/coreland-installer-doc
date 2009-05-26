@@ -3,13 +3,13 @@
   (title "install_error")
   (para funtion_desc "Return consistent error string.")
   (subsection
-    (title "synopsis")
+    (title "Synopsis")
     (para-verbatim function_synopsis
 "const char *
 install_error (int errno);
 "))
   (subsection
-    (title "description")
+    (title "Description")
     (para
       "The " (item function "install_error") " returns an error string based on
        the value of " (item function_param "errno") ". This value can be any of

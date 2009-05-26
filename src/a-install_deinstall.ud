@@ -3,13 +3,13 @@
   (title "install_deinstall")
   (para funtion_desc "Deinstall item.")
   (subsection
-    (title "synopsis")
+    (title "Synopsis")
     (para-verbatim function_synopsis
 "struct install_status_t
 install_deinstall (struct install_item *item, unsigned in flags);
 "))
   (subsection
-    (title "description")
+    (title "Description")
     (para
       "The " (item function "install_deinstall") " function performs the
       opposite of the operation
