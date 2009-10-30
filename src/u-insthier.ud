@@ -35,6 +35,11 @@
     " and/or " (item struct_field "group") " fields are " (item constant "NULL")
     " the user/group credentials of the current process are used.")
 
+  (para
+    "If the platform on which the " (item package "installer") " package is
+    running do not support POSIX style permissions, the "
+    (item struct_field "perm") " field is ignored.")
+
   (para "The " (item package "installer") " package insists that the array be called "
     (item variable "insthier") " and that there also be a symbol of type
     " (item type "unsigned long") " called " (item variable

@@ -6,79 +6,45 @@
   (subsection
     (title "Configuration")
     (para
-      "On installation, binaries, source files, libraries and
-       headers are installed into various locations. The locations
-       can be customised by editing single-line configuration files.
-       The defaults are as follows:")
-    (para
+      "For reasons of reliability, the compilation process does not
+       read the environment or, for example, attempt to detect which
+       compiler tools should be used to compile code. The compilation
+       process reads a series of single-line configuration files which
+       specify various options. The defaults provided are acceptable
+       for most systems but users wanting customised builds will need
+       to edit the following:")
+    (subsection
+      (title "C compiler configuration")
       (table install_config
         (t-row
-          (item "default path")
           (item "configuration file")
-          (item "description"))
+          (item "description")
+          (item "default value"))
         (t-row
-          (item file_name "/usr/local/share/coreland/installer-repos")
-          (item file_name "conf-repos")
-          (item "Source code repository."))
+          (item file_name "conf-cc")
+          (item "C compiler used to compile C code to object files")
+          (item command "cc"))
         (t-row
-          (item file_name "/usr/local/lib/coreland/installer-static")
-          (item file_name "conf-slibdir")
-          (item "Static library directory."))
+          (item file_name "conf-ld")
+          (item "C linker used to link C object files into executables")
+          (item command "cc"))
         (t-row
-          (item file_name "/usr/local/lib/coreland/installer")
-          (item file_name "conf-dlibdir")
-          (item "Dynamic library directory."))
+          (item file_name "conf-cflags")
+          (item "Optional flags passed to C compiler")
+          (item parameter "-O"))
         (t-row
-          (item file_name "/usr/local/include/coreland/installer")
-          (item file_name "conf-incdir")
-          (item "Header file directory."))
+          (item file_name "conf-ldflags")
+          (item "Optional flags passed to C linker")
+          (item parameter " "))
         (t-row
-          (item file_name "/usr/local/bin")
-          (item file_name "conf-bindir")
-          (item "Executable directory."))))
-      (para
-        "For reasons of reliability, the compilation process does not
-         read the environment or, for example, attempt to detect which
-         compiler tools should be used to compile code. The compilation
-         process reads a series of single-line configuration files which
-         specify various options. The defaults provided are acceptable
-         for most systems but users wanting customised builds will need
-         to edit the following:")
-      (subsection
-        (title "C compiler configuration")
-        (table install_config
-          (t-row
-            (item "configuration file")
-            (item "description")
-            (item "default value"))
-          (t-row
-            (item file_name "conf-cc")
-            (item "C compiler used to compile C code to object files")
-            (item command "cc"))
-          (t-row
-            (item file_name "conf-ld")
-            (item "C linker used to link C object files into executables")
-            (item command "cc"))
-          (t-row
-            (item file_name "conf-cflags")
-            (item "Optional flags passed to C compiler")
-            (item parameter "-O"))
-          (t-row
-            (item file_name "conf-ldflags")
-            (item "Optional flags passed to C linker")
-            (item parameter " "))
-          (t-row
-            (item file_name "conf-ldflags")
-            (item "Optional flags passed to C linker")
-            (item parameter " "))))
-      )
+          (item file_name "conf-ldflags")
+          (item "Optional flags passed to C linker")
+          (item parameter " ")))))
 
   ; compilation requirements
 
   (subsection
     (title "Requirements")
-
-    
 
     (para "The package requires a C90" (footnote (link-ext
     "http://www.open-std.org/jtc1/sc22/wg14/")) " compiler and a POSIX"
@@ -100,15 +66,28 @@ make tests")
 
     (para "The first " (item command "make") " command compiles the
     object code itself. The second command runs the test suite - any
-    errors here signal incorrect package behaviour.")
+    errors here signal incorrect package behaviour."))
 
-    (para "To install:")
+  (subsection
+    (title "Installation")
 
-    (para-verbatim example
-"make install
-make install-check")
-
-    (para "The first " (item command "make") " command installs all
-    relevant files. The second command checks that all files were
-    installed correctly."))
-)
+    (para "The " (item package "installer") " package is not intended
+      to be installed as such - the following files should be directly
+      included with your project:")
+    (para
+      (list
+        (item "install-core.c")
+        (item "install-posix.c")
+        (item "install-win32.c")
+        (item "install.h")
+        (item "install_os.h")))
+    (para "These files can be compiled and linked with any application
+      that wishes to use the installer functions.")
+    (para "The following files, in the source distribution, are used
+      as the installers for all " (link-ext "http://coreland.ath.cx" "coreland")
+      " projects:")
+    (para
+      (list
+        (item "installer.c")
+        (item "instchk.c")
+        (item "deinstaller.c")))))

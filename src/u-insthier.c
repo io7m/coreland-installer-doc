@@ -6,7 +6,6 @@ struct install_item insthier[] = {
   {INST_MKDIR, NULL,              NULL, REPOS, NULL, NULL, 0755},
   {INST_COPY,  "deinstaller.c",   NULL, REPOS, NULL, NULL, 0644},
   {INST_COPY,  "generic-conf.c",  NULL, REPOS, NULL, NULL, 0644},
-  {INST_COPY,  "install-error.c", NULL, REPOS, NULL, NULL, 0644},
   {INST_COPY,  "install-posix.c", NULL, REPOS, NULL, NULL, 0644},
   {INST_COPY,  "install-win32.c", NULL, REPOS, NULL, NULL, 0644},
   {INST_COPY,  "install.c",       NULL, REPOS, NULL, NULL, 0644},

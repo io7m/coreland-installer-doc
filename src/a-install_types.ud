@@ -24,7 +24,8 @@
 
     (para "If the " (item struct_field "status") " field is any value other
       than " (item constant "INSTALL_STATUS_OK") ", the "
-      (item struct_field "message") " field contains an appropriate message.")
+      (item struct_field "message") " and " (item struct_field "error_message")
+      " fields contain appropriate error messages.")
  
     (para "If the " (item struct_field "status") " field is set to "
       (item constant "INSTALL_STATUS_FATAL") ", a serious error has occurred 
