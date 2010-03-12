@@ -46,11 +46,12 @@
   (subsection
     (title "Requirements")
 
-    (para "The package requires a C90" (footnote (link-ext
-    "http://www.open-std.org/jtc1/sc22/wg14/")) " compiler and a POSIX"
+    (para "The package requires a C90 " (footnote (link-ext
+    "http://www.open-std.org/jtc1/sc22/wg14/")) " compiler and a minimal POSIX "
     (footnote (link-ext "http://www.opengroup.org/")) " environment to
-      compile. The package is expected to be usable in a non-POSIX
-      environment, but is not currently tested extensively in one.")
+      compile "
+      (footnote (item "MinGW MSYS is sufficient on Windows platforms, for example."))
+      ".")
 
     (include "pkg-install-req.ud"))
 
